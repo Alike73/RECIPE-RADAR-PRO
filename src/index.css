@@ -1,13 +1,40 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import "~normalize.css/normalize.css";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
+
+:root {
+  --size: calc(1vh + 1vw);
+  --c-gold-sm: hsl(47deg 32.34% 45.42%);
+  --c-gold-lg: hsl(47deg 20.84% 40.4%);
+  --c-search-bg: linear-gradient(-20deg, #55778e 0%, #4e4376 100%);
+  --c-blue-md: hsl(224, 23%, 75%);
+  --c-black: hsl(0, 0%, 0%);
+  --c-white: hsl(180, 13%, 95%);
+  --eye-color: hsl(40, 100%, 99%);
+  --iris-color: hsl(0, 0%, 20%);
+  --pupil-color: hsl(233, 56%, 86%);
+  --c-text: hsl(254, 7%, 35%);
+  --c-red: #C70039;
+  --c-dark-xxl: #070919;
+  --c-orange-md: #B8621B;
+  --c-progress-bg: linear-gradient(to right, #243949 0%, #517fa4 100%);
+
+  --text-shadow: 0px 4px 3px rgb(0 0 0 / 40%), 0px 8px 13px rgb(0 0 0 / 10%), 0px 18px 23px rgb(0 0 0 / 10%);
+  --img-shadow: drop-shadow(1px 2px 3px #584e4e);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html, body {
+  scroll-behavior: smooth;
 }
+
+*, 
+*::before, 
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
