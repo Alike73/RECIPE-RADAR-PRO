@@ -1,0 +1,35 @@
+
+.top-to-btm{
+    position: relative;
+}
+.progressBox{
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    z-index: 1110;
+    cursor: pointer;
+    animation: move-btn 3s ease-in-out infinite;
+    transition: all .5s ease-in-out;
+}
+
+.progressBox:hover{
+    animation: none;
+    color: var(--color-red);
+}
+@keyframes move-btn {
+    0%{
+        transform: translateY(0px);
+    }
+    25%{
+        transform: translateY(20px);
+    }
+    50%{
+        transform: translateY(0px);
+    }
+    75%{
+        transform: translateY(-20px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}

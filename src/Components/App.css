@@ -8,11 +8,46 @@
 }
 
 .main_header {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 6rem;
+  height: 5rem;
   padding: .5rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-bottom: 2px solid var(--c-gold-sm);
   background: url('../Assets/Images/background68.png'), var(--c-progress-bg);
+}
+
+.top_logo {
+  width: 4rem;
+  padding: .5rem;
+  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+  border-radius: 50%;
+  border: 2px solid var(--c-gold-sm);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.top_progress_bar {
+  position: fixed;
+  z-index: 1100;
+  top: 1px;
+  left: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 5px;
+  border: none;
+  background: transparent;
+}
+.top_progress_bar::-webkit-progress-bar {
+  background: var(--c-progress-bg);
+}
+.top_progress_bar::-webkit-progress-value {
+  background: var(--c-orange-md);
 }
 
 .main_banner {
@@ -20,6 +55,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  border-bottom: .25rem solid var(--c-gold-sm);
 }
 
 /* ---Video and Recipe images frame-style-- */
@@ -129,6 +165,35 @@ figure {
   filter: var(--img-shadow);
   z-index: 2;
 }
+
+.search_wrapper {
+  margin-top: 0;
+  width: 100%;
+  height: 8rem;
+  padding: .25rem .5rem;
+}
+
+.mouth {
+  width: 4rem;
+  height: 1rem;
+  background: black;
+  border-radius: 49% 51% 47% 53% / 10% 11% 89% 90% ;
+  border-top: .125rem solid var(--c-red);
+  border-bottom: .25rem solid var(--c-red);
+}
+
+.teeth_wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.teeth {
+  width: .5rem;
+  height: .25rem;
+  border-bottom-left-radius: .125rem;
+  border-bottom-right-radius: .125rem;
+  background: var(--c-white);
+}
 /* -------------------------- */
 .chefIcon {
   width: 12.5rem;
@@ -141,6 +206,9 @@ figure {
   position: relative;
   padding: 40px;
   box-sizing: border-box;
+  outline: .125rem solid var(--c-gold-sm);
+  border-radius: .25rem;
+  outline-offset: -.125rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
@@ -163,6 +231,7 @@ figure {
   padding: 1.5rem .5rem;
   border-radius: .25rem;
   background: url('../Assets/Images/background79.webp');
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 
 /* ---Recipe-Card-List-Style-- */
@@ -334,4 +403,72 @@ figure {
   font-weight: normal;
   font-size: 14px;
   font-size: clamp(.5rem, calc(var(--size) * 1.2), .75rem);
+}
+
+/* ------Learn-More-Btn------ */
+.learn_more_btn {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  border: none;
+  background: none;
+}
+
+.learn_more_btn {
+  position: relative;
+  display: flex;
+  font-weight: 600;
+  font-size: 20px;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.learn_more_btn p {
+  margin: 0;
+  position: relative;
+  font-size: 20px;
+  color: var(--primary-color)
+}
+
+.learn_more_btn::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  left: 0;
+  bottom: -7px;
+  background: var(--hovered-color);
+  height: 2px;
+  transition: 0.3s ease-out;
+}
+
+.learn_more_btn p::before {
+  position: absolute;
+/*   box-sizing: border-box; */
+  content: "Explore";
+  width: 0%;
+  inset: 0;
+  color: var(--hovered-color);
+  overflow: hidden;
+  transition: 0.3s ease-out;
+}
+
+.learn_more_btn:hover::after {
+  width: 100%;
+}
+
+.learn_more_btn:hover p::before {
+  width: 100%;
+}
+
+.learn_more_btn:hover svg {
+  transform: translateX(4px);
+  color: var(--hovered-color)
+}
+
+.learn_more_btn svg {
+  color: var(--primary-color);
+  transition: 0.2s;
+  position: relative;
+  width: 15px;
+  transition-delay: 0.2s;
 }

@@ -1,3 +1,4 @@
+import LearnMoreBtn from "./LearnMoreBtn";
 import RecipeImage from "./RecipeImage";
 import Ingredients from "./RecipeList/Ingredients";
 import Nutrition from "./RecipeList/Nutrition";
@@ -16,6 +17,9 @@ const RecipeCard = () => {
         <div className="col-md-7 order-md-2">
           <Ingredients />
           <Nutrition />
+          <div className="d-flex justify-content-end">
+            <LearnMoreBtn />
+          </div>
         </div>
       </div>
     </div>

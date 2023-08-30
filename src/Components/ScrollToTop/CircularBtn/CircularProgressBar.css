@@ -1,0 +1,41 @@
+
+/* .progressBox {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} */
+
+.circleOuter {
+    position: relative;
+}
+
+.bi-arrow-up-circle {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #515e65;
+}
+
+.circle-background,
+.circle-progress {
+    fill: none;
+}
+
+.circle-background {
+    stroke: #ddd;
+}
+
+.circle-progress {
+    stroke: var(--c-red);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.circle-text {
+    font-size: 3em;
+    font-weight: bold;
+    fill: var(--c-red);
+}
