@@ -1,0 +1,337 @@
+
+
+.main {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  background: url('../Assets/Images/plaid.jpg');
+}
+
+.main_header {
+  width: 100%;
+  height: 6rem;
+  padding: .5rem 1rem;
+  border-bottom: 2px solid var(--c-gold-sm);
+  background: url('../Assets/Images/background68.png'), var(--c-progress-bg);
+}
+
+.main_banner {
+  background: url('../Assets/Images/recipeBanner.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* ---Video and Recipe images frame-style-- */
+
+.media_frame {
+  position: relative;
+}
+
+video {
+  object-fit: cover;
+  width: 100%;
+}
+
+figure {
+  position: relative;
+	width: 100%;
+	height:	auto;
+	/* margin:	1em auto; */
+}
+
+.outerBevel { /* of frame */
+	box-shadow:	4px 6px 12px 0 black;
+	border-width: 3px;
+	border-style: solid;
+	border-color: rgb(109, 84, 58) rgb(24, 19, 13) rgb(24, 19, 13) rgb(109, 84, 58);
+}
+
+.flatSurface { /* of frame */
+	border:	8px solid rgb(65, 40, 16);
+}
+
+.innerBevel { /* of frame */
+  position: relative;
+	border-width: .25rem;
+	border-style: solid;
+	border-color: rgb(24, 19, 13)	rgb(109, 84, 58) rgb(109, 84, 58) rgb(24, 19, 13);
+  background: linear-gradient(135deg, #857667 38%, #FDD6B9 65%);
+}
+/* ---Inner-border-gradient-recipe-image--- */
+.gradient-border {
+  width: 100%;
+}
+.gradient-border img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border: 1rem solid;
+  border-image: linear-gradient(135deg, #857667 38%, #FDD6B9 65%);
+  border-image-slice: 1;
+}
+/* ------------Main-Title-Style------------ */
+.six {
+  padding: 50px 20px;
+  text-align: center;
+}
+.six h1 {
+  font-weight: normal;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  line-height: 1;
+  color: var(--c-brown-md);
+  font-size: clamp(42px, calc(var(--size)*3.7), 84px);
+  font-weight: 700;
+  padding: .4em .5em .55em;
+  text-shadow: var(--text-shadow);
+}
+.six h1:before,
+.six h1:after {
+  content: ""; 
+  position: absolute;
+  width: 60%;
+  height: .1em;
+  background: rgb(65, 40, 16); 
+}
+.six h1:before {
+  left: 0;
+  top: 0;
+  filter: var(--img-shadow);
+}
+.six h1:after {
+  right: 0;
+  bottom: 0;
+  filter: var(--img-shadow);
+}
+.six h1 span:before,
+.six h1 span:after {
+  content: ""; 
+  position: absolute;
+  width: .65em;
+  height: .65em;
+  border: .1em solid rgb(65, 40, 16);
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+.six h1 span:before {
+  top: -.55em;
+  left: -.325em;
+  background-image: linear-gradient(to top, #c79081 0%, #dfa579 100%);
+  filter: var(--img-shadow);
+}
+.six h1 span:after {
+  bottom: -.55em;
+  right: -.325em;
+  background-image: linear-gradient(to top, #c79081 0%, #dfa579 100%);
+  filter: var(--img-shadow);
+  z-index: 2;
+}
+/* -------------------------- */
+.chefIcon {
+  width: 12.5rem;
+  filter: var(--img-shadow);
+}
+
+/* ---Recipe-Card-Style------- */
+.wrap {
+  background: linear-gradient(90deg, #cecec8 50%, #9bc6c8 50%);
+  position: relative;
+  padding: 40px;
+  box-sizing: border-box;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.wrap:before, 
+.wrap:after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 10px;
+  background: linear-gradient(90deg, #9bc6c8 50%, #cecec8 50%);
+  left: 25%;
+}
+.wrap:before {
+  top: 15px;
+}
+.wrap:after {
+  bottom: 15px;
+}
+.recipe_card {
+  padding: 1.5rem .5rem;
+  border-radius: .25rem;
+  background: url('../Assets/Images/background79.webp');
+}
+
+/* ---Recipe-Card-List-Style-- */
+.menu {
+  list-style: none;
+  padding: 0;
+  border: 1px solid rgba(0,0,0, .2);
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+.menu li {
+  overflow: hidden;
+  padding: 6px 10px;
+  font-size: 20px;
+}
+.menu li:first-child {
+  font-weight: bold;
+  padding: 15px 0 10px 15px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(0,0,0, .2);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: #679bb7;
+  font-size: 24px;
+  box-shadow: 0 10px 20px -5px rgba(0,0,0, .2);
+}
+.menu li:first-child:before {
+  content: "\2749";
+  margin-right: 10px;
+}
+.menu span {
+  float: left;
+  width: 75%;
+  color: #7C7D7F;
+}
+.menu em {
+  float: right;
+  color: #9c836e;
+  font-weight: bold;
+}
+
+/* ---------Ribbon------------ */
+.ribbon {
+  position: absolute;
+  left: -5px; top: -5px;
+  z-index: 1;
+  overflow: hidden;
+  width: 75px; height: 75px;
+  text-align: right;
+}
+.ribbon span {
+  font-size: 10px;
+  font-weight: bold;
+  color: #FFF;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 20px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  width: 100px;
+  display: block;
+  background: #79A70A;
+  background: linear-gradient(#F79E05 0%, #8F5408 100%);
+  box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 19px; left: -21px;
+}
+.ribbon span::before {
+  content: "";
+  position: absolute; left: 0px; top: 100%;
+  z-index: -1;
+  border-left: 3px solid #8F5408;
+  border-right: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #8F5408;
+}
+.ribbon span::after {
+  content: "";
+  position: absolute; right: 0px; top: 100%;
+  z-index: -1;
+  border-left: 3px solid transparent;
+  border-right: 3px solid #8F5408;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #8F5408;
+}
+
+/* ------------Scoreboard----------------- */
+.badge-border {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 2.5rem auto;
+  background: var(--c-gold-sm);
+  border-radius: 12px;
+  text-align: center;
+  font-family: 'Lobster', cursive;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  z-index: 2;
+}
+.badge-border:before, .badge-border:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 150px;
+  background: var(--c-gold-sm);
+  border-radius: 12px;
+}
+.badge-border:before {
+  transform: rotate(30deg);
+}
+.badge-border:after {
+  transform: rotate(60deg);
+}
+.badge-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 160px;
+  height: 160px;
+  margin-left: -80px;
+  margin-top: -80px;
+  background: #987d4b;
+  border: 5px solid #FFF3D8;
+  border-radius: 50%;
+  text-align: center;
+  z-index: 3;
+}
+.badge-content h2 {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 140px;
+  margin: 0;
+  height: 50%;
+  line-height: 100px;
+  background: #FFF3D8;
+  border-radius: 140px 140px 0 0;
+  font-size: 26px;
+  font-size: clamp(1.25rem, calc(var(--size) * 1.2), 1.5rem);
+  color: #A66844;
+}
+.badge-content h3 {
+  position: absolute;
+  bottom: 2px;
+  left: 5px;
+  width: 140px;
+  margin: 0;
+  line-height: 75px;
+  color: #FFF3D8;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 24px;
+  font-size: clamp(1.5rem, calc(var(--size) * 1.2), 1.75rem);
+}
+
+.badge-content p {
+  position: absolute;
+  bottom: 22px;
+  left: 5px;
+  width: 140px;
+  margin: 0;
+  line-height: 75px;
+  color: #FFF3D8;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 14px;
+  font-size: clamp(.5rem, calc(var(--size) * 1.2), .75rem);
+}

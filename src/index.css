@@ -1,11 +1,14 @@
 @import "~normalize.css/normalize.css";
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
 
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Roboto', sans-serif; */
 
 :root {
   --size: calc(1vh + 1vw);
   --c-gold-sm: hsl(47deg 32.34% 45.42%);
   --c-gold-lg: hsl(47deg 20.84% 40.4%);
+  --c-brown-md: hsl(19, 15%, 46%);
   --c-search-bg: linear-gradient(-20deg, #55778e 0%, #4e4376 100%);
   --c-blue-md: hsl(224, 23%, 75%);
   --c-black: hsl(0, 0%, 0%);
