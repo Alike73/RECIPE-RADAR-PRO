@@ -49,7 +49,8 @@ Recipe Radar Pro is a React.js web application that allows users to search for r
    Example: 1apple 2bananas 3mango, etc...
    And press enter key on keyboard or click on the submit button that is below the input field.
 
-   Find detailed nutritional information for the entire recipe, including calories, protein, fat, carbohydrates, vitamins, and minerals.
+   Find detailed nutritional information for the entire recipe, 
+   including calories, protein, fat, carbohydrates, vitamins, and minerals.
 
 3. **Responsive Design:**
     The app is responsive, so feel free to use it on different devices and screen sizes.
@@ -70,7 +71,8 @@ Recipe Radar Pro is a React.js web application that allows users to search for r
 
 ## Future Enhancements
 
-    Recipe Radar Pro is a powerful tool for discovering recipes and analyzing nutrition, but there are several potential enhancements for the future:
+    Recipe Radar Pro is a powerful tool for discovering recipes and analyzing nutrition, 
+    but there are several potential enhancements for the future:
 
 1. **User Accounts:**
     Implement user authentication and accounts to allow users to save favorite recipes and track their dietary preferences.
