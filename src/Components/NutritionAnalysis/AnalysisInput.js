@@ -1,22 +1,22 @@
 
 import '../Main/MainBannerContent/SearchInput/SearchInput.css';
-import { useState } from "react";
+// import { useState } from "react";
 import Swal from "sweetalert2";
 import Eyes from "../Main/MainBannerContent/SearchInput/Eyes/Eyes";
 import head from '../../Assets/Images/headerChef.png';
 import chef from '../../Assets/Images/chef3.png';
 
 
-const AnalysisInput = ({ finalSearch, myRecipeSearch, mySearch, setMySearch }) => {
+const AnalysisInput = ({ finalSearch, myRecipeSearch, mySearch, setMySearch, handleInputFocus, isSearchInput, setIsSearchInput, isInputFocused,setIsInputFocused }) => {
     
-    const [isSearchInput, setIsSearchInput] = useState(false);
-    const [isInputFocused, setIsInputFocused] = useState(false);
+    // const [isSearchInput, setIsSearchInput] = useState(false);
+    // const [isInputFocused, setIsInputFocused] = useState(false);
     
 
-    const handleInputFocus = () => {
-        setIsInputFocused(true);
-        setIsSearchInput(true);
-    };
+    // const handleInputFocus = () => {
+    //     setIsInputFocused(true);
+    //     setIsSearchInput(true);
+    // };
 
     const handleInputBlur = () => {
         setIsInputFocused(false);

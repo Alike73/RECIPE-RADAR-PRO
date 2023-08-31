@@ -1,25 +1,22 @@
 import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 import { BubblyContainer, BubblyLink } from "react-bubbly-transitions";
-
+import { useEffect } from "react";
+import gsap from "../../gsapSetup";
 import Main from "../Main/Main";
 import NutritionAnalysis from "../NutritionAnalysis/NutritionAnalysis";
-import { useEffect } from "react";
+import ScrollToTop from "../ScrollToTop/ScrollToTop";
+
+
 
 const MyApp = () => {
 
   useEffect(() => {
-    const progressBar = document.querySelector('.top_progress_bar');
-
-    const updateProgressBar = () => {
-      const scrollPercentage = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
-      progressBar.value = scrollPercentage;
-    };
-
-    window.addEventListener('scroll', updateProgressBar);
-
-    return () => {
-      window.removeEventListener('scroll', updateProgressBar);
-    };
+    gsap.to(".top_progress_bar", {
+        value: 100,
+        scrollTrigger: {
+            scrub: 0.5,
+        },
+    });
   }, []);
 
   return (
@@ -31,8 +28,9 @@ const MyApp = () => {
           path="/"
           element={
             <>
+            <ScrollToTop />
               <header className="main_header">
-                <progress className='top_progress_bar' max="100" value="0" />
+              <progress className='top_progress_bar' max="100" value="0" />
                 <div className="container">
                   <div className='d-flex flex-wrap align-items-center justify-content-center'>
                     <ul className='nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 mx-auto'>

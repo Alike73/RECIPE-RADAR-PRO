@@ -15,6 +15,15 @@ const NutritionAnalysis = () => {
   const [wordSubmitted, setWordSubmitted] = useState('');
   const [myNutrition, setMyNutrition] = useState('');
   const [stateLoader, setStateLoader] = useState(false);
+  // ------------------------------------------------------
+  const [isSearchInput, setIsSearchInput] = useState(false);
+  const [isInputFocused, setIsInputFocused] = useState(false);
+  
+  const handleInputFocus = () => {
+    setIsInputFocused(true);
+    setIsSearchInput(true);
+  };
+  // ------------------------------------------------------
 
   const APP_ID = '1bad6450';
   const APP_KEY = '0bcacbd22b58a6c4f59e266f77d32487';
@@ -46,6 +55,7 @@ const NutritionAnalysis = () => {
         });
     }
   }, [wordSubmitted]);
+  
 
   return (
     <div className="py-5 mt-5 text-center nutrition_analysis_page">
@@ -60,8 +70,26 @@ const NutritionAnalysis = () => {
               and start typing your products like: 
               <b>1bananas</b> <b>2apples</b> <b>3eggs,</b> etc...
           </p>
-          <img className="d-block mx-auto mb-4" src={ analysisIcon } alt="analysisIcon" width={ 150 } />
-          <AnalysisInput finalSearch = { finalSearch } myRecipeSearch = { myRecipeSearch } mySearch = { mySearch } setMySearch = { setMySearch } />
+          <img 
+            className="d-block mx-auto mb-4" 
+            src={ analysisIcon } 
+            alt="analysisIcon" 
+            width={ 150 } 
+            onClick={handleInputFocus} 
+
+          />
+          <AnalysisInput 
+            finalSearch = { finalSearch } 
+            myRecipeSearch = { myRecipeSearch } 
+            mySearch = { mySearch } 
+            setMySearch = { setMySearch }
+            handleInputFocus = { handleInputFocus }
+            isSearchInput = { isSearchInput }
+            setIsSearchInput = { setIsSearchInput }
+            isInputFocused = { isInputFocused }
+            setIsInputFocused = { setIsInputFocused } 
+
+          />
         </div>
       </div>
       <div className="container mt-5">

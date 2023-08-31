@@ -1,7 +1,5 @@
 
 import './App.css';
-// import Main from './Main/Main';
-import ScrollToTop from './ScrollToTop/ScrollToTop';
 import MyApp from './MyApp/MyApp';
 import { useEffect, useState } from 'react';
 import MosquitoLoader from './MosquitoLoader/MosquitoLoader';
@@ -21,7 +19,6 @@ function App() {
     <div className="App">
       {loading ? (<MosquitoLoader />) : (
         <>
-          <ScrollToTop />
           <MyApp />
         </>
       )}

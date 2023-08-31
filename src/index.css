@@ -8,7 +8,7 @@ font-family: 'Roboto', sans-serif; */
   --size: calc(1vh + 1vw);
   --c-gold-sm: hsl(47deg 32.34% 45.42%);
   --c-gold-lg: hsl(47deg 20.84% 40.4%);
-  --c-brown-md: hsl(19, 15%, 46%);
+  --c-peach: hsl(13, 38%, 64%);
   --c-grey: hsl(220, 1%, 49%);
   --c-search-bg: linear-gradient(-20deg, #55778e 0%, #4e4376 100%);
   --c-blue-md: hsl(224, 23%, 75%);

@@ -119,7 +119,8 @@ figure {
   display: inline-block;
   margin: 0;
   line-height: 1;
-  color: var(--c-brown-md);
+  /* color: var(--c-brown-md); */
+  color: var(--c-peach);
   font-size: clamp(42px, calc(var(--size)*3.7), 84px);
   font-weight: 700;
   padding: .4em .5em .55em;
