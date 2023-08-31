@@ -1,30 +1,30 @@
 
-import { useEffect } from 'react';
 import './App.css';
-import Main from './Main/Main';
+// import Main from './Main/Main';
 import ScrollToTop from './ScrollToTop/ScrollToTop';
+import MyApp from './MyApp/MyApp';
+import { useEffect, useState } from 'react';
+import MosquitoLoader from './MosquitoLoader/MosquitoLoader';
 
 function App() {
 
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
-    const progressBar = document.querySelector('.top_progress_bar');
-
-    const updateProgressBar = () => {
-      const scrollPercentage = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
-      progressBar.value = scrollPercentage;
-    };
-
-    window.addEventListener('scroll', updateProgressBar);
-
-    return () => {
-      window.removeEventListener('scroll', updateProgressBar);
-    };
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
   }, []);
+  
 
   return (
     <div className="App">
-      <ScrollToTop />
-      <Main />
+      {loading ? (<MosquitoLoader />) : (
+        <>
+          <ScrollToTop />
+          <MyApp />
+        </>
+      )}
     </div>
   );
 }

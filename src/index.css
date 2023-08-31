@@ -9,6 +9,7 @@ font-family: 'Roboto', sans-serif; */
   --c-gold-sm: hsl(47deg 32.34% 45.42%);
   --c-gold-lg: hsl(47deg 20.84% 40.4%);
   --c-brown-md: hsl(19, 15%, 46%);
+  --c-grey: hsl(220, 1%, 49%);
   --c-search-bg: linear-gradient(-20deg, #55778e 0%, #4e4376 100%);
   --c-blue-md: hsl(224, 23%, 75%);
   --c-black: hsl(0, 0%, 0%);
@@ -20,6 +21,7 @@ font-family: 'Roboto', sans-serif; */
   --c-red: hsl(343, 100%, 39%);
   --c-dark-xxl: hsl(233, 56%, 6%);
   --c-orange-md: hsl(27, 74%, 41%);
+  --c-yellow: hsl(52, 100%, 58%);
   --c-progress-bg: linear-gradient(to right, #243949 0%, #517fa4 100%);
 
   --primary-color: hsl(0, 0%, 7%);
@@ -44,3 +46,28 @@ body {
   padding: 0;
 }
 
+/* ------------ScrollBar-----------> */
+::-webkit-scrollbar {
+  width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+  background: #2B4865;
+
+}
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(to top, #c79081 0%, #dfa579 100%);
+  box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
+  border-radius: 100px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+/* -------------------------------< */
+
+body .react-bubbly-transitions__bubbly-link.active {
+  display: none;
+}

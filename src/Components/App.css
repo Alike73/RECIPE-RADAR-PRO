@@ -5,6 +5,7 @@
   height: 100%;
   min-height: 100vh;
   background: url('../Assets/Images/plaid.jpg');
+  background-attachment: fixed;
 }
 
 .main_header {
@@ -13,7 +14,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 5rem;
+  height: 6rem;
   padding: .5rem 1rem;
   display: flex;
   justify-content: center;
@@ -23,7 +24,7 @@
 }
 
 .top_logo {
-  width: 4rem;
+  width: 3rem;
   padding: .5rem;
   background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
   border-radius: 50%;
@@ -271,6 +272,15 @@ figure {
   color: #9c836e;
   font-weight: bold;
 }
+.menu b {
+  float: right;
+  color: #9c836e;
+  font-weight: bold;
+  text-decoration: underline;
+  text-underline-offset: .25rem;
+  text-decoration-thickness: 3px;
+  text-decoration-color: var(--c-red);
+}
 
 /* ---------Ribbon------------ */
 .ribbon {
@@ -472,3 +482,27 @@ figure {
   width: 15px;
   transition-delay: 0.2s;
 }
+
+/* -----Nutrition-Analysis-Page----- */
+.nutrition_analysis_page {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  background: url('../Assets/Images/plaid.jpg');
+  background-attachment: fixed;
+}
+
+.analysis_header {
+  background: url('../Assets/Images/crumpledPaper.png');
+}
+
+.analysis_title {
+  color: var(--c-gold-sm);
+  text-shadow: var(--text-shadow);
+}
+
+.analysis_text {
+  color: var(--c-grey);
+  text-align: center;
+}
+

@@ -1,21 +1,45 @@
 import MainBannerContent from "./MainBannerContent/MainBannerContent";
 import MainBodyContent from "./MainBodyContent/MainBodyContent";
-import podImg from '../../Assets/Images/pod.png';
+import { useEffect, useState } from "react";
+import { getRecipes } from "../../FetchData/FetchRecipes";
+import { useDispatch, useSelector } from "react-redux";
+import { getWordSubmitted, setWordSubmitted } from "../../Redux/RecipesSlice";
 
 
 const Main = () => {
 
+  const [myRecipes, setMyRecipes] = useState([]);
+  const [mySearch, setMySearch] = useState('');
+  const wordSubmitted = useSelector(getWordSubmitted);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    getRecipes(setMyRecipes, wordSubmitted);
+  }, [wordSubmitted])
+
+  console.log(myRecipes)
+
+  const myRecipeSearch = (e) => {
+    setMySearch(e.target.value)
+  }
+
+  const finalSearch = (e) => {
+    e.preventDefault();
+    dispatch(setWordSubmitted(mySearch))
+  }
+
   return (
     <div className="main">
-      <header className="main_header">
-        <progress className='top_progress_bar' max="100" value="0" />
-        <img className="top_logo" src={ podImg } alt="cooking" />
-      </header>
       <div className="main_banner">
-        <MainBannerContent />
+        <MainBannerContent 
+          myRecipeSearch = { myRecipeSearch } 
+          mySearch = { mySearch }
+          setMySearch = { setMySearch } 
+          finalSearch = { finalSearch }
+        />
       </div>
       <div className="main_body">
-        <MainBodyContent />
+        <MainBodyContent myRecipes = { myRecipes } />
       </div>
     </div>
   )

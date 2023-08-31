@@ -1,11 +1,11 @@
 
 
-const RecipeRibbon = () => {
+const RecipeRibbon = ({ cuisineType }) => {
 
   return (
     <div className="ribbon">
       <span id="changeText">
-        Kazakh
+        { cuisineType }
       </span>
     </div>
   )
