@@ -1,5 +1,4 @@
 
-
 const MainTitle = () => {
   return (
     <div className="six">

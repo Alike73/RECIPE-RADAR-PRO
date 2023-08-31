@@ -52,7 +52,7 @@ const RecipeCard = ({
   return (
     <div className="wrap my-5">
       <div className="row featurette recipe_card">
-      <h3>{ label }</h3>
+      <h3 className="recipe_title">{ label }</h3>
         <div className="col-md-5 order-md-1">
           <RecipeImage image = { image } label = { label } cuisineType = { cuisineType } />
           <Scoreboard calories = { calories } recipeTotalWeight = { recipeTotalWeight } />

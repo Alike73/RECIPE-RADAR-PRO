@@ -1,6 +1,5 @@
+
 import RecipeCard from "./RecipeCard";
-
-
 
 const MainBodyContent = ({ myRecipes }) => {
 

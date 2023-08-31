@@ -1,23 +1,10 @@
 import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 import { BubblyContainer, BubblyLink } from "react-bubbly-transitions";
-import { useEffect } from "react";
-import gsap from "../../gsapSetup";
 import Main from "../Main/Main";
 import NutritionAnalysis from "../NutritionAnalysis/NutritionAnalysis";
 import ScrollToTop from "../ScrollToTop/ScrollToTop";
 
-
-
 const MyApp = () => {
-
-  useEffect(() => {
-    gsap.to(".top_progress_bar", {
-        value: 100,
-        scrollTrigger: {
-            scrub: 0.5,
-        },
-    });
-  }, []);
 
   return (
     <div>
@@ -30,19 +17,26 @@ const MyApp = () => {
             <>
             <ScrollToTop />
               <header className="main_header">
-              <progress className='top_progress_bar' max="100" value="0" />
                 <div className="container">
                   <div className='d-flex flex-wrap align-items-center justify-content-center'>
                     <ul className='nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 mx-auto'>
                       <li>
-                        <BubblyLink to="/">
+                        <BubblyLink 
+                          to="/" 
+                          colorStart="linear-gradient(to top, #0ba360 0%, #3cba92 100%)" 
+                          colorEnd="linear-gradient(to top, #c79081 0%, #dfa579 100%)"
+                          >
                           <span className="Btn">
                             Go back
                           </span>
                         </BubblyLink>
                       </li>
                       <li>
-                        <BubblyLink to="/nutrition_analysis">
+                        <BubblyLink 
+                          to="/nutrition_analysis" 
+                          colorStart="linear-gradient(to top, #30cfd0 0%, #330867 100%)" 
+                          colorEnd="linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%)"
+                          >
                           <span className="Btn">
                             Analyze
                           </span>

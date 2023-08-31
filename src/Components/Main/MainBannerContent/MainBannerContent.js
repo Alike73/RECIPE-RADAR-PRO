@@ -4,7 +4,7 @@ import MainTitle from "./MainTitle";
 import SearchInput from "./SearchInput/SearchInput";
 
 
-const MainBannerContent = ({ myRecipeSearch, mySearch, setMySearch, finalSearch }) => {
+const MainBannerContent = ({ myRecipeSearch, finalSearch }) => {
 
   return (
     <div className="container col-xxl-8 px-4 py-5">
@@ -13,10 +13,7 @@ const MainBannerContent = ({ myRecipeSearch, mySearch, setMySearch, finalSearch 
         <div className='search_wrapper'>
           <SearchInput 
             myRecipeSearch = { myRecipeSearch } 
-            mySearch = { mySearch } 
-            setMySearch = { setMySearch} 
             finalSearch = { finalSearch } 
-
           />
         </div>
         <div className="col-10 col-sm-8 col-lg-6">

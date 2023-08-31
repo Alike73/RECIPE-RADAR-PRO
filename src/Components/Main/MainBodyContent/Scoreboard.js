@@ -1,6 +1,4 @@
 
-
-
 const Scoreboard = ({ calories, recipeTotalWeight}) => {
 
   return (

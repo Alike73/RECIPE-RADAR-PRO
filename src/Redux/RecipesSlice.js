@@ -8,6 +8,9 @@ export const recipesSlice = createSlice({
     initialState: {
         windowWidth: window.innerWidth,
         wordSubmitted: 'avocado',
+        isSearchInput: false,
+        isInputFocused: false,
+        mySearch: '',
     },
 
     reducers: {
@@ -17,14 +20,24 @@ export const recipesSlice = createSlice({
         setWordSubmitted: (state, action) => {
             state.wordSubmitted = action.payload;
         },
+        setIsSearchInput: (state, action) => {
+            state.isSearchInput = action.payload
+        },
+        setIsInputFocused: (state, action) => {
+            state.isInputFocused = action.payload
+        },
+        setMySearch: (state, action) => {
+            state.mySearch = action.payload
+        },
     },
     
 });
 
 export const getWindowWidth = state => state.recipesItems.windowWidth;
 export const getWordSubmitted = state => state.recipesItems.wordSubmitted;
-
-
-export const { setWindowWidth, setWordSubmitted } = recipesSlice.actions;
-
+export const getSearchInput = state => state.recipesItems.isSearchInput;
+export const getInputFocused = state => state.recipesItems.isInputFocused;
+export const getMySearch = state => state.recipesItems.mySearch;
+export const { setMyRecipes, setWindowWidth, setWordSubmitted, 
+    setIsSearchInput, setIsInputFocused, setMySearch } = recipesSlice.actions;
 export default recipesSlice.reducer;

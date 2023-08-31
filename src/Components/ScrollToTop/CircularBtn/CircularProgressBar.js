@@ -12,7 +12,6 @@ const CircularProgressBar = ({ sqSize = 40, strokeWidth = 4, goToTop }) => {
 
   // State to store the scroll progress percentage
   const [scrollProgress, setScrollProgress] = useState(0);
-
   // Update the scroll progress on user scroll
   const handleScroll = () => {
     const scrollY = window.scrollY;

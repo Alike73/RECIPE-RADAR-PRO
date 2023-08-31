@@ -1,7 +1,5 @@
 import IngredientsItem from "./IngredientsItem";
 
-
-
 const Ingredients = ({ ingredients }) => {
 
   return (

@@ -5,17 +5,16 @@ import FetchNutritionAnalysis from '../../FetchData/FetchNutritionAnalysis';
 import Nutrition from './Nutrition';
 import AnalysisLoader from './AnalysisLoader/AnalysisLoader';
 
-// Application ID: 1bad6450
-// Application Keys: 0bcacbd22b58a6c4f59e266f77d32487
-// APP_URL: https://api.edamam.com/api/nutrition-details?app_id=1bad6450&app_key=0bcacbd22b58a6c4f59e266f77d32487
-
 const NutritionAnalysis = () => {
+
+  const APP_ID = '1bad6450';
+  const APP_KEY = '0bcacbd22b58a6c4f59e266f77d32487';
+  const APP_URL = 'https://api.edamam.com/api/nutrition-details';
 
   const [mySearch, setMySearch] = useState('');
   const [wordSubmitted, setWordSubmitted] = useState('');
   const [myNutrition, setMyNutrition] = useState('');
   const [stateLoader, setStateLoader] = useState(false);
-  // ------------------------------------------------------
   const [isSearchInput, setIsSearchInput] = useState(false);
   const [isInputFocused, setIsInputFocused] = useState(false);
   
@@ -23,11 +22,6 @@ const NutritionAnalysis = () => {
     setIsInputFocused(true);
     setIsSearchInput(true);
   };
-  // ------------------------------------------------------
-
-  const APP_ID = '1bad6450';
-  const APP_KEY = '0bcacbd22b58a6c4f59e266f77d32487';
-  const APP_URL = 'https://api.edamam.com/api/nutrition-details';
 
   const myRecipeSearch = e => {
     setMySearch(e.target.value);
@@ -62,13 +56,13 @@ const NutritionAnalysis = () => {
       {stateLoader && <AnalysisLoader />}
       <div className="wrap col-lg-4 mx-auto my-5">
         <div className="py-2 analysis_header">
-          <h2 className="display-3 fw-bold analysis_title px-2 py-5">
+          <h2 className="analysis_title px-2 py-5">
             Nutrition Analysis...
           </h2>
           <p className='py-2 fs-5 analysis_text'>
               Click on the magnifying glass, 
               and start typing your products like: 
-              <b>1bananas</b> <b>2apples</b> <b>3eggs,</b> etc...
+              <b>1bananas</b> <b>2apples</b> <b>3eggs,</b> <b>1glass of milk</b> etc...
           </p>
           <img 
             className="d-block mx-auto mb-4" 

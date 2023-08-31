@@ -1,8 +1,9 @@
 
 import './App.css';
+import CubicLoader from './CubicLoader/CubicLoader';
 import MyApp from './MyApp/MyApp';
 import { useEffect, useState } from 'react';
-import MosquitoLoader from './MosquitoLoader/MosquitoLoader';
+
 
 function App() {
 
@@ -17,11 +18,10 @@ function App() {
 
   return (
     <div className="App">
-      {loading ? (<MosquitoLoader />) : (
-        <>
-          <MyApp />
-        </>
-      )}
+      { loading 
+        ? (<CubicLoader />) 
+        : (<MyApp />)
+      }
     </div>
   );
 }

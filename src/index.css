@@ -1,7 +1,8 @@
 @import "~normalize.css/normalize.css";
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
 
-/* font-family: 'Montserrat', sans-serif;
+/* font-family: 'Lobster', cursive;
+font-family: 'Montserrat', sans-serif;
 font-family: 'Roboto', sans-serif; */
 
 :root {
@@ -9,6 +10,9 @@ font-family: 'Roboto', sans-serif; */
   --c-gold-sm: hsl(47deg 32.34% 45.42%);
   --c-gold-lg: hsl(47deg 20.84% 40.4%);
   --c-peach: hsl(13, 38%, 64%);
+  --c-brown: hsl(29, 60%, 16%);
+  --c-brown-lg: rgb(65, 40, 16);
+  --c-brown-sm: hsl(32, 30%, 36%);
   --c-grey: hsl(220, 1%, 49%);
   --c-search-bg: linear-gradient(-20deg, #55778e 0%, #4e4376 100%);
   --c-blue-md: hsl(224, 23%, 75%);
@@ -19,6 +23,14 @@ font-family: 'Roboto', sans-serif; */
   --pupil-color: hsl(233, 56%, 86%);
   --c-text: hsl(254, 7%, 35%);
   --c-red: hsl(343, 100%, 39%);
+  --c-blue-sm: hsl(201, 36%, 56%);
+  --c-ribbon-span-before-after: hsl(34, 89%, 30%);
+  --c-badge-content-bg: hsl(39, 34%, 45%);
+  --c-badge-content-color: hsl(42, 100%, 92%);
+  --c-badge-content-c-brown: hsl(22, 42%, 46%);
+  --c-ribbon-span-bg: hsl(78, 89%, 35%);
+  --c-menu-span: hsl(220, 1%, 49%);
+  --c-menu-em: hsl(27, 19%, 52%);
   --c-dark-xxl: hsl(233, 56%, 6%);
   --c-orange-md: hsl(27, 74%, 41%);
   --c-yellow: hsl(52, 100%, 58%);
@@ -29,6 +41,7 @@ font-family: 'Roboto', sans-serif; */
 
   --text-shadow: 0px 4px 3px rgb(0 0 0 / 40%), 0px 8px 13px rgb(0 0 0 / 10%), 0px 18px 23px rgb(0 0 0 / 10%);
   --img-shadow: drop-shadow(1px 2px 3px hsl(0, 6%, 33%));
+  
 }
 
 html, body {

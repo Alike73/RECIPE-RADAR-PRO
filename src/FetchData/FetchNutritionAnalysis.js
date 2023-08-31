@@ -18,11 +18,11 @@ const FetchNutritionAnalysis = async (APP_URL, APP_ID, APP_KEY, ingr) => {
   } else {
     // throw new Error('Ingredients entered incorrectly')
     Swal.fire({
-      title: 'Sorry',
+      color: '#C70039',
+      title: 'ERROR!',
       text: 'Ingredients entered incorrectly. Example: 1egg 2bananas 1apple, etc',
       imageUrl: chef,
       imageWidth: 150,
-      // imageHeight: 200,
       imageAlt: 'Custom image',
     });
   }
