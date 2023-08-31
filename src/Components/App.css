@@ -235,6 +235,7 @@ figure {
   overflow: hidden;
   padding: 6px 10px;
   font-size: 20px;
+  border-bottom: 1px solid var(--c-blue-md);
   transition: all .2s ease-in-out;
 }
 .menu li:first-child {
