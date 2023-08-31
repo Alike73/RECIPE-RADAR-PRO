@@ -5,7 +5,7 @@ const Scoreboard = ({ calories, recipeTotalWeight}) => {
     <div className="badge-border">
       <div className="badge-content">
         <h2>{ calories.toFixed() } kcal</h2>
-        <p>totalWeight:</p>
+        <p>Total Weight:</p>
         <h3>{ recipeTotalWeight.toFixed() } gr</h3>
       </div>
     </div>

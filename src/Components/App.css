@@ -396,6 +396,7 @@ figure {
   width: 140px;
   margin: 0;
   line-height: 75px;
+  letter-spacing: 1px;
   color: var(--c-badge-content-color);
   text-transform: uppercase;
   font-weight: normal;
@@ -410,6 +411,7 @@ figure {
   width: 140px;
   margin: 0;
   line-height: 75px;
+  letter-spacing: 2px;
   color: var(--c-badge-content-color);
   text-transform: uppercase;
   font-weight: normal;
