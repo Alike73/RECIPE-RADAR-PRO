@@ -6,7 +6,7 @@
 <img src="./src/Assets/Images/analysisIcon.png" alt="Recipe Radar Pro Logo" width="150">
 
 ## Technologies
-<img src="https://img.shields.io/badge/react-C08261?style=for-the-badge&logo=react&logoColor=4D2DB7"/> <img src="https://img.shields.io/badge/redux-FF9B50?style=for-the-badge&logo=redux&logoColor=4D2DB7"/> <img src="https://img.shields.io/badge/bootstrap-9A3B3B?style=for-the-badge&logo=bootstrap&logoColor=4D2DB7"/> <img src="https://img.shields.io/badge/greensock-337CCF?style=for-the-badge&logo=greensock&logoColor=F1F0E8"/> <img src="https://img.shields.io/badge/css3-9F91CC?style=for-the-badge&logo=css3&logoColor=4D2DB7"/>
+<img src="https://img.shields.io/badge/react-C08261?style=for-the-badge&logo=react&logoColor=4D2DB7"/> <img src="https://img.shields.io/badge/redux-FF9B50?style=for-the-badge&logo=redux&logoColor=4D2DB7"/> <img src="https://img.shields.io/badge/bootstrap-9A3B3B?style=for-the-badge&logo=bootstrap&logoColor=4D2DB7"/> <img src="https://img.shields.io/badge/greensock-1A5D1A?style=for-the-badge&logo=greensock&logoColor=F1F0E8"/> <img src="https://img.shields.io/badge/css3-9F91CC?style=for-the-badge&logo=css3&logoColor=4D2DB7"/>
 
 
 Recipe Radar Pro is a React.js web application that allows users to search for recipes and perform nutrition analysis on various dishes. The app utilizes the Edamam API to fetch recipe data and perform nutrition analysis, providing users with a seamless experience for discovering new recipes while keeping track of their nutritional information.
