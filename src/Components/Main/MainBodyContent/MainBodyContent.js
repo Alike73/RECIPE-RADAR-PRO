@@ -1,12 +1,14 @@
 
 import RecipeCard from "./RecipeCard";
 
-const MainBodyContent = ({ myRecipes }) => {
+const MainBodyContent = ({ myRecipes, firstRecipeRef }) => {
 
   return (
     <div className="container py-5 mt-5">
       { myRecipes.map((item, index) => <RecipeCard
-          key={ index } 
+          key={ index }
+          firstRecipeRef = { firstRecipeRef }
+          indexFirstRecipe = { index }
           label = { item.recipe.label }
           image = { item.recipe.image }
           calories = { item.recipe.calories }

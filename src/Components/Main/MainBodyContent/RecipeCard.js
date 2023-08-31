@@ -19,7 +19,7 @@ const RecipeCard = ({
   ironLabel, ironQuantity, ironUnit,
   magnesiumLabel, magnesiumQuantity, magnesiumUnit,
   potassiumLabel, potassiumQuantity, potassiumUnit,
-  sodiumLabel, sodiumQuantity, sodiumUnit
+  sodiumLabel, sodiumQuantity, sodiumUnit, firstRecipeRef, indexFirstRecipe
 }) => {
 
   useEffect(() => {
@@ -50,7 +50,7 @@ const RecipeCard = ({
   }, []);
 
   return (
-    <div className="wrap my-5">
+    <div className="wrap my-5" ref={indexFirstRecipe === 0 ? firstRecipeRef : null}>
       <div className="row featurette recipe_card">
       <h3 className="recipe_title">{ label }</h3>
         <div className="col-md-5 order-md-1">

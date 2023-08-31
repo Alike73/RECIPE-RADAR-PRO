@@ -1,6 +1,6 @@
 import MainBannerContent from "./MainBannerContent/MainBannerContent";
 import MainBodyContent from "./MainBodyContent/MainBodyContent";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { getRecipes } from "../../FetchData/FetchRecipes";
 import { useDispatch, useSelector } from "react-redux";
 import { getMySearch, getWordSubmitted, setMySearch, setWordSubmitted } from "../../Redux/RecipesSlice";
@@ -9,25 +9,37 @@ import { getMySearch, getWordSubmitted, setMySearch, setWordSubmitted } from "..
 const Main = () => {
 
   const [myRecipes, setMyRecipes] = useState([]);
-  
   const mySearch = useSelector(getMySearch);
   const wordSubmitted = useSelector(getWordSubmitted);
+
+  const firstRecipeRef = useRef(null);
   const dispatch = useDispatch();
 
   useEffect(() => {
     getRecipes(setMyRecipes, wordSubmitted);
-  }, [wordSubmitted])
+  }, [wordSubmitted]);
 
   console.log(myRecipes)
 
   const myRecipeSearch = (e) => {
-    dispatch(setMySearch(e.target.value))
-  }
+    dispatch(setMySearch(e.target.value));
+  };
+
+  const scrollToFirstRecipe = () => {
+    if (firstRecipeRef.current) {
+      firstRecipeRef.current.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+  };
 
   const finalSearch = (e) => {
     e.preventDefault();
-    dispatch(setWordSubmitted(mySearch))
-  }
+    dispatch(setWordSubmitted(mySearch));
+    scrollToFirstRecipe();
+  };
+  
 
   return (
     <div className="main">
@@ -38,7 +50,7 @@ const Main = () => {
         />
       </div>
       <div className="main_body">
-        <MainBodyContent myRecipes = { myRecipes } />
+        <MainBodyContent myRecipes = { myRecipes } firstRecipeRef = { firstRecipeRef } />
       </div>
     </div>
   )

@@ -1,6 +1,6 @@
 # RECIPE-RADAR-PRO: Recipe Finder and Nutrition Analysis App
 
-[Live Demo](https://www.reciperadarpro.com) | [GitHub Repository](https://github.com/Alike73/RECIPE-RADAR-PRO)
+[Live Demo](https://gilded-bavarois-ce9ea9.netlify.app/) | [GitHub Repository](https://github.com/Alike73/RECIPE-RADAR-PRO)
 
 
 <img src="./src/Assets/Images/analysisIcon.png" alt="Recipe Radar Pro Logo" width="150">
