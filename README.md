@@ -5,6 +5,9 @@
 
 <img src="./src/Assets/Images/analysisIcon.png" alt="Recipe Radar Pro Logo" width="150">
 
+## Technologies
+<img src="https://img.shields.io/badge/react-DAD4B5?style=for-the-badge&logo=react&logoColor=4D2DB7"/>
+
 
 Recipe Radar Pro is a React.js web application that allows users to search for recipes and perform nutrition analysis on various dishes. The app utilizes the Edamam API to fetch recipe data and perform nutrition analysis, providing users with a seamless experience for discovering new recipes while keeping track of their nutritional information.
 
