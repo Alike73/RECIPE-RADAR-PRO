@@ -4,18 +4,23 @@ import { BubblyContainer, BubblyLink } from "react-bubbly-transitions";
 import Main from "../Main/Main";
 import NutritionAnalysis from "../NutritionAnalysis/NutritionAnalysis";
 import { useEffect } from "react";
-import gsap from "../../gsapSetup";
 
 const MyApp = () => {
 
   useEffect(() => {
-    gsap.to(".top_progress_bar", {
-        value: 100,
-        scrollTrigger: {
-            scrub: 0.5,
-        },
-    });
-}, []);
+    const progressBar = document.querySelector('.top_progress_bar');
+
+    const updateProgressBar = () => {
+      const scrollPercentage = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+      progressBar.value = scrollPercentage;
+    };
+
+    window.addEventListener('scroll', updateProgressBar);
+
+    return () => {
+      window.removeEventListener('scroll', updateProgressBar);
+    };
+  }, []);
 
   return (
     <div>
