@@ -1,9 +1,11 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import analysisIcon from '../../Assets/Images/analysisIcon.png';
 import AnalysisInput from './AnalysisInput';
 import FetchNutritionAnalysis from '../../FetchData/FetchNutritionAnalysis';
 import Nutrition from './Nutrition';
 import AnalysisLoader from './AnalysisLoader/AnalysisLoader';
+import Swal from "sweetalert2";
+import chef from '../../Assets/Images/chef3.png';
 
 const NutritionAnalysis = () => {
 
@@ -17,6 +19,8 @@ const NutritionAnalysis = () => {
   const [stateLoader, setStateLoader] = useState(false);
   const [isSearchInput, setIsSearchInput] = useState(false);
   const [isInputFocused, setIsInputFocused] = useState(false);
+
+  const recipeRef = useRef(null);
   
   const handleInputFocus = () => {
     setIsInputFocused(true);
@@ -25,12 +29,25 @@ const NutritionAnalysis = () => {
 
   const myRecipeSearch = e => {
     setMySearch(e.target.value);
-  }
+  };
+
+  const scrollToFirstRecipe = () => {
+    if (recipeRef.current) {
+
+      recipeRef.current.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+  };
 
   const finalSearch = e => {
     e.preventDefault();
     setWordSubmitted(mySearch);
-  }
+    setTimeout(() => {
+      scrollToFirstRecipe();
+    }, 1300);
+  };
 
   useEffect(() => {
     if (wordSubmitted !== '') {
@@ -44,7 +61,15 @@ const NutritionAnalysis = () => {
           setStateLoader(false);
         })
         .catch(error => {
-          alert(error.message);
+          // alert(error.message);
+          Swal.fire({
+            color: '#C70039',
+            title: 'ERROR!',
+            text: 'Ingredients entered incorrectly. Example: 1egg 2bananas 1apple, etc',
+            imageUrl: chef,
+            imageWidth: 150,
+            imageAlt: 'Custom image',
+          });
           setStateLoader(false);
         });
     }
@@ -87,9 +112,12 @@ const NutritionAnalysis = () => {
         </div>
       </div>
       <div className="container mt-5">
-        <div className="analysis_list col-lg-8 mx-auto">
+        <div className="analysis_list col-lg-8 mx-auto" ref={ recipeRef }>
           <ul className="menu text-start card">
-            <li>How many elements and minerals in { mySearch }:</li>
+            <li>
+            How many elements and minerals in 
+            <span className='ms-1 text-center text-decoration-underline'>{ mySearch }:</span>
+            </li>
             {
               myNutrition && <li className='border-bottom fs-3 fw-bold'><span>"Total calories:"</span><b>{myNutrition.calories} kcal</b></li>
             }

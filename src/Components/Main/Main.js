@@ -50,7 +50,11 @@ const Main = () => {
         />
       </div>
       <div className="main_body">
-        <MainBodyContent myRecipes = { myRecipes } firstRecipeRef = { firstRecipeRef } />
+        <MainBodyContent 
+        myRecipes = { myRecipes } 
+        firstRecipeRef = { firstRecipeRef } 
+          
+        />
       </div>
     </div>
   )
