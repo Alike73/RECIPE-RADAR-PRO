@@ -116,7 +116,7 @@ const NutritionAnalysis = () => {
           <ul className="menu text-start card">
             <li>
             How many elements and minerals in 
-            <span className='ms-1 text-center text-decoration-underline'>{ mySearch }:</span>
+            <span className='ms-1 text-center text-decoration-underline'>{ mySearch }</span>
             </li>
             {
               myNutrition && <li className='border-bottom fs-3 fw-bold'><span>"Total calories:"</span><b>{myNutrition.calories} kcal</b></li>
