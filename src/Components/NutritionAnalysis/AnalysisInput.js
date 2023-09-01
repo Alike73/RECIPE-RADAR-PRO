@@ -5,13 +5,11 @@ import Eyes from "../Main/MainBannerContent/SearchInput/Eyes/Eyes";
 import head from '../../Assets/Images/headerChef.png';
 import chef from '../../Assets/Images/chef3.png';
 
-
 const AnalysisInput = ({ 
     finalSearch, myRecipeSearch, mySearch, 
     setMySearch, handleInputFocus, isSearchInput, 
     setIsSearchInput, isInputFocused,setIsInputFocused 
     }) => {
-    
 
     const handleInputBlur = () => {
         setIsInputFocused(false);
@@ -38,7 +36,6 @@ const AnalysisInput = ({
             imageAlt: 'Custom image',
         })
     }
-    
 
     const btnContent = mySearch ? 'Submit' : (
         <div>

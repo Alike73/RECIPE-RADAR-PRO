@@ -500,12 +500,19 @@ figure {
   background: url('../Assets/Images/crumpledPaper.png');
 }
 
+.analysis_img {
+  filter: var(--img-shadow);
+}
+
 .analysis_title {
   font-family: 'Montserrat', sans-serif;
   font-size: clamp(40px, calc(var(--size)*2.7), 56px);
   font-weight: 800;
-  color: var(--c-gold-sm);
-  text-shadow: var(--text-shadow);
+  background: var(--c-analysis-title);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: var(--text-shadow-soft);
 }
 
 .analysis_text {

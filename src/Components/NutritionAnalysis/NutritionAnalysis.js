@@ -46,7 +46,7 @@ const NutritionAnalysis = () => {
     setWordSubmitted(mySearch);
     setTimeout(() => {
       scrollToFirstRecipe();
-    }, 1500);
+    }, 1000);
   };
 
   useEffect(() => {
@@ -79,44 +79,50 @@ const NutritionAnalysis = () => {
   return (
     <div className="py-5 mt-5 text-center nutrition_analysis_page">
       {stateLoader && <AnalysisLoader />}
-      <div className="wrap col-lg-4 mx-auto my-5">
+      <div className='col-lg-4 mx-auto'>
+
+      <div className="wrap mx-1 my-5">
         <div className="py-2 analysis_header">
-          <h2 className="analysis_title px-2 py-5">
-            Nutrition Analysis...
+          <img 
+            className="d-block mx-auto mb-4 analysis_img" 
+            src={ analysisIcon } 
+            alt="analysisIcon" 
+            width={ 120 } 
+            onClick={handleInputFocus} 
+          />
+          <h2 className="analysis_title px-2 py-2">
+            Nutrition Analysis
           </h2>
-          <p className='py-2 fs-5 analysis_text'>
+          
+          <div className='px-1'>
+            <AnalysisInput 
+              finalSearch = { finalSearch } 
+              myRecipeSearch = { myRecipeSearch } 
+              mySearch = { mySearch } 
+              setMySearch = { setMySearch }
+              handleInputFocus = { handleInputFocus }
+              isSearchInput = { isSearchInput }
+              setIsSearchInput = { setIsSearchInput }
+              isInputFocused = { isInputFocused }
+              setIsInputFocused = { setIsInputFocused } 
+            />
+          </div>
+          <p className='p-2 mt-3 fs-5 analysis_text'>
               Click on the magnifying glass, 
               and start typing your products like: 
               <b>1bananas</b> <b>2apples</b> <b>3eggs,</b> <b>1glass of milk</b> etc...
           </p>
-          <img 
-            className="d-block mx-auto mb-4" 
-            src={ analysisIcon } 
-            alt="analysisIcon" 
-            width={ 150 } 
-            onClick={handleInputFocus} 
-
-          />
-          <AnalysisInput 
-            finalSearch = { finalSearch } 
-            myRecipeSearch = { myRecipeSearch } 
-            mySearch = { mySearch } 
-            setMySearch = { setMySearch }
-            handleInputFocus = { handleInputFocus }
-            isSearchInput = { isSearchInput }
-            setIsSearchInput = { setIsSearchInput }
-            isInputFocused = { isInputFocused }
-            setIsInputFocused = { setIsInputFocused } 
-
-          />
         </div>
+      </div>
       </div>
       <div className="container mt-5">
         <div className="analysis_list col-lg-8 mx-auto" ref={ recipeRef }>
           <ul className="menu text-start card">
             <li>
             How many elements and minerals in 
-            <span className='ms-1 text-center text-decoration-underline'>{ mySearch }</span>
+            <span className='ms-1 text-center text-decoration-underline'>
+              { mySearch }
+            </span>
             </li>
             {
               myNutrition && <li className='border-bottom fs-3 fw-bold'><span>"Total calories:"</span><b>{myNutrition.calories} kcal</b></li>
@@ -126,7 +132,7 @@ const NutritionAnalysis = () => {
                 .map(({ label, quantity, unit }) =>
                   <Nutrition
                     label={label}
-                    quantity={quantity}
+                    quantity={quantity.toFixed(1)}
                     unit={unit}
                     key={ label }
                   />

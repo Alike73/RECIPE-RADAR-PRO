@@ -1,8 +1,8 @@
 import Swal from "sweetalert2";
 import chef from '../Assets/Images/chef3.png';
 
-
 const FetchNutritionAnalysis = async (APP_URL, APP_ID, APP_KEY, ingr) => {
+  
   const response = await fetch(`${APP_URL}?app_id=${APP_ID}&app_key=${APP_KEY}`, {
     method: "POST",
     headers: {
