@@ -3,6 +3,7 @@ import { BubblyContainer, BubblyLink } from "react-bubbly-transitions";
 import Main from "../Main/Main";
 import NutritionAnalysis from "../NutritionAnalysis/NutritionAnalysis";
 import ScrollToTop from "../ScrollToTop/ScrollToTop";
+import TopProgressScroll from "../TopProgressScroll/TopProgressScroll";
 
 const MyApp = () => {
 
@@ -15,6 +16,7 @@ const MyApp = () => {
           path="/"
           element={
             <>
+            <TopProgressScroll />
             <ScrollToTop />
               <header className="main_header">
                 <div className="container">

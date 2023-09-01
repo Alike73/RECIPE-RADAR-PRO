@@ -19,8 +19,6 @@ const Main = () => {
     getRecipes(setMyRecipes, wordSubmitted);
   }, [wordSubmitted]);
 
-  console.log(myRecipes)
-
   const myRecipeSearch = (e) => {
     dispatch(setMySearch(e.target.value));
   };
@@ -39,7 +37,6 @@ const Main = () => {
     dispatch(setWordSubmitted(mySearch));
     scrollToFirstRecipe();
   };
-  
 
   return (
     <div className="main">
@@ -53,7 +50,7 @@ const Main = () => {
         <MainBodyContent 
         myRecipes = { myRecipes } 
         firstRecipeRef = { firstRecipeRef } 
-          
+
         />
       </div>
     </div>

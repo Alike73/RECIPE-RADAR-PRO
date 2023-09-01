@@ -31,8 +31,6 @@ const getRecipes = async (setMyRecipes, wordSubmitted) => {
       } else {
         setMyRecipes(data.hits);
       }
-      // console.log(data.hits)
-      // setMyRecipes(data.hits)
     }
   }
   catch(err) {
