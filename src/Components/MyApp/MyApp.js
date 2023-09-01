@@ -9,6 +9,7 @@ const MyApp = () => {
 
   return (
     <div>
+    <TopProgressScroll />
     <BrowserRouter>
       <BubblyContainer />
       <Routes>
@@ -16,7 +17,6 @@ const MyApp = () => {
           path="/"
           element={
             <>
-            <TopProgressScroll />
             <ScrollToTop />
               <header className="main_header">
                 <div className="container">
