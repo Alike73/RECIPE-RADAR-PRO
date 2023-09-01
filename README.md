@@ -102,11 +102,9 @@ Recipe Radar Pro is a React.js web application that allows users to search for r
   You can copy, modify and so on.
 
   Happy cooking and nutritional exploration with Recipe Radar Pro! 
-  If you have any questions or need assistance, 
-  feel free to contact us at: 
-    <a href="mailto:alimzhanisla@gmail.com">
-        <img src="https://img.shields.io/badge/gmail-DDE6ED?style=for-the-badge&logo=gmail&logoColor=B70404"/>
-    </a>
+  If you have any questions or need assistance,
+
+  Feel free to contact us at:  <a href="mailto:alimzhanisla@gmail.com"><img src="https://img.shields.io/badge/gmail-DDE6ED?style=for-the-badge&logo=gmail&logoColor=B70404"/></a>
 
 
 
