@@ -46,7 +46,7 @@ const NutritionAnalysis = () => {
     setWordSubmitted(mySearch);
     setTimeout(() => {
       scrollToFirstRecipe();
-    }, 1300);
+    }, 1500);
   };
 
   useEffect(() => {
