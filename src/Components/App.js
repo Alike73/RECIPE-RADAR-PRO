@@ -3,6 +3,7 @@ import './App.css';
 import CubicLoader from './CubicLoader/CubicLoader';
 import MyApp from './MyApp/MyApp';
 import { useEffect, useState } from 'react';
+import TopProgressScroll from './TopProgressScroll/TopProgressScroll';
 
 
 function App() {
@@ -20,7 +21,12 @@ function App() {
     <div className="App">
       { loading 
         ? (<CubicLoader />) 
-        : (<MyApp />)
+        : (
+            <>
+              <TopProgressScroll />
+              <MyApp />
+            </>
+          )
       }
     </div>
   );
