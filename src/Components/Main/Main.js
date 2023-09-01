@@ -33,9 +33,9 @@ const Main = () => {
   };
 
   const finalSearch = (e) => {
+    scrollToFirstRecipe();
     e.preventDefault();
     dispatch(setWordSubmitted(mySearch));
-    scrollToFirstRecipe();
   };
 
   return (
