@@ -105,8 +105,8 @@ Recipe Radar Pro is a React.js web application that allows users to search for r
   If you have any questions or need assistance,
 
  ##  Feel free to contact me at: 
-  
-  <a href="mailto:alimzhanisla@gmail.com"><img src="https://img.shields.io/badge/gmail-DDE6ED?style=for-the-badge&logo=gmail&logoColor=B70404"/></a>
+
+  <a href="mailto:alimzhanisla@gmail.com"><img src="https://img.shields.io/badge/gmail-7895CB?style=for-the-badge&logo=gmail&logoColor=B70404"/></a>
 
 
 
