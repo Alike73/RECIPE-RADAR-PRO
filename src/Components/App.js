@@ -20,7 +20,11 @@ function App() {
     <div className="App">
       { loading 
         ? (<CubicLoader />) 
-        : (<MyApp />)
+        : (
+            <>
+              <MyApp />
+            </>
+          )
       }
     </div>
   );

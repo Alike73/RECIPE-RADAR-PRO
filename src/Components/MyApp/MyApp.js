@@ -3,6 +3,7 @@ import { BubblyContainer, BubblyLink } from "react-bubbly-transitions";
 import Main from "../Main/Main";
 import NutritionAnalysis from "../NutritionAnalysis/NutritionAnalysis";
 import ScrollToTop from "../ScrollToTop/ScrollToTop";
+import Footer from "../Footer/Footer";
 
 const MyApp = () => {
 
@@ -56,6 +57,7 @@ const MyApp = () => {
         </Route>
       </Routes>
     </BrowserRouter>
+    <Footer />
     </div>
   )
 }
