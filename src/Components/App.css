@@ -524,6 +524,7 @@ figure {
 .my_footer {
   font-family: 'Roboto', sans-serif;
   background:  #cecec8;
+  border-top: 3px solid var(--c-gold-sm);
 }
 @keyframes pulsate {
   0% {
